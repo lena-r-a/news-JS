@@ -43,11 +43,11 @@ export interface IDataNews {
 
 export interface IresponseDataNews {
   articles?: IDataNews[];
-  status: String;
-  totalResults?: Number;
+  status: string;
+  totalResults?: number;
 }
 
 export interface IresponseDataSources {
   sources?: IDataSources[];
-  status: String;
+  status: string;
 }

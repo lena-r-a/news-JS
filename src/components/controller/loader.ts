@@ -15,7 +15,7 @@ class Loader {
     callback: (data: IresponseDataNews | IresponseDataSources) => void = () => {
       console.error('No callback for GET response');
     },
-  ) {
+  ): void {
     this.load('GET', endpoint, callback, options);
   }
 
@@ -45,7 +45,7 @@ class Loader {
     endpoint: string,
     callback: (data: IresponseDataSources | IresponseDataNews) => void,
     options = {},
-  ) {
+  ): void {
     fetch(this.makeUrl(options, endpoint), { method })
       .then(this.errorHandler)
       .then((res) => res.json())

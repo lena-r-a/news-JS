@@ -1,10 +1,11 @@
 .sources {
+    margin-top: 1rem;
     display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    height: 120px;
+    flex-direction: column;
+    width: 30%;
+    /* height: 120px; */
     overflow: auto;
-    align-items: center;
+    align-items: left;
     font: 300 1em 'Fira Sans', sans-serif;
 }
 
@@ -13,11 +14,12 @@
     border: 2px solid #30c5ff;
     font: inherit;
     line-height: 1;
-    margin: 0.5em;
-    padding: 1em 2em;
+    margin: 0.2em;
+    padding: 1em 1em;
     color: #70d6ff;
     transition: 0.25s;
     cursor: pointer;
+    display: none;
 }
 
 .source__item:hover,
@@ -31,4 +33,20 @@
 .source__item-name {
     font-weight: 400;
     white-space: nowrap;
+}
+
+.displayblock {
+    display: block;
+}
+
+@media screen and (max-width: 769px) {
+    .sources {
+        font: 300 0.7em 'Fira Sans', sans-serif;
+    }
+    .source__item {
+        padding: 0.2em 0.2em;
+    }
+    .source__item-name {
+        white-space: normal;
+    }
 }

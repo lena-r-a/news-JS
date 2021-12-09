@@ -10,6 +10,7 @@ class Sources {
       const sourceClone = sourceItemTemp.content.cloneNode(true) as HTMLElement;
 
       (<HTMLElement>sourceClone.querySelector('.source__item-name')).textContent = item.name;
+      (<HTMLElement>sourceClone.querySelector('.source__item')).classList.add(`${item.category}-source`);
       (<HTMLElement>sourceClone.querySelector('.source__item')).setAttribute('data-source-id', item.id);
 
       fragment.append(sourceClone);
